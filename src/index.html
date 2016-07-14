@@ -1,5 +1,5 @@
 <!--
-   Angular 2 Starter
+   Angular 2 JumpStart
    Dan Wahlin
 
    @DanWahlin
@@ -9,15 +9,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <base href="/src/"></base>
+    <base href="/">
     <title>Angular 2 TypeScript App</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Angular 2 Starter">
+    <meta name="description" content="Angular 2 JumpStart">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css' />
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
     <link href="styles/styles.css" rel="stylesheet" />
+    
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+	<!-- remove for bundle usage -->
+	<script src="systemjs.config.js"></script>
+	<script>
+		System.import('app').catch(function(err){ console.error(err); });
+	</script>
+	<!-- remove for bundle usage -->
 </head>
 <body>
     <header class="navbar navbar-inner navbar-fixed-top">
@@ -29,16 +43,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <img src="images/people.png" alt="logo">
-              <span class="app-title">Customer Manager</span>
+              <a href="/">
+                <img src="images/people.png" alt="logo">
+                <span class="app-title">Customer Manager</span>
+              </a>
             </div>
         </nav>
     </header>
 
     <main class="container">
-        <app>
+        <app-container>
             Loading...
-        </app>
+        </app-container>
         <br /><br />
     </main>
 
@@ -49,7 +65,7 @@
                     <footer>
                         <div class="row">
                             <div class="col-md-12">
-                                <!--Created by <a href="http://twitter.com/DanWahlin" target="_blank">Dan Wahlin</a>-->
+                                Created by <a href="http://twitter.com/DanWahlin" target="_blank">Dan Wahlin</a>
                             </div>
                         </div>
                     </footer>
@@ -57,16 +73,10 @@
             </div>
         </div>
     </footer>
-
-    <script src="../node_modules/systemjs/dist/system.src.js"></script>
-    <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
-    <script src="../node_modules/angular2/bundles/http.dev.js"></script>
-    <script src="../node_modules/angular2/bundles/router.dev.js"></script>
-    <script>
-        System.config({
-            packages: {'app': {defaultExtension: 'js'}}
-        });
-        System.import('app/bootstrap').catch(console.log.bind(console));
-    </script>
+    
+	<!-- add for bundle usage -->
+	<!-- <script src="dist/bundle.min.js"></script> -->
+	<!-- add for bundle usage -->
+    
 </body>
 </html>

@@ -12,6 +12,9 @@ main {
     padding-top: 60px;
 }
 
+/* Ensure display:flex and others don't override a [hidden] */
+[hidden] { display: none !important; }
+
 .white {
     color: white;
 }
@@ -40,14 +43,14 @@ th {
 }
 
 .navbar .nav > li.toolbar-item > a {
-    color: black;
+    color: #9E9E9E;
     font-weight:bold;
     -webkit-text-shadow: none;
     text-shadow: none;
 }
 
 .navbar .nav > .toolbar-item > a.active {
-    color: #027FF4;
+    color: #000;
 }
 
 .toolbar-item a {
@@ -56,6 +59,14 @@ th {
 
 .view {
 
+}
+
+.edit-icon {
+    cursor: pointer;
+}
+
+.orders-table {
+    width:50%;
 }
 
 .indent {
@@ -69,7 +80,7 @@ th {
 .card {
     background-color:#fff;
     border: 1px solid #d4d4d4;
-    height:100px;
+    height:120px;
     margin-bottom: 20px;
     position: relative;
 }
@@ -230,5 +241,21 @@ footer {
 
 filter-textbox {
     margin-top: 5px;
+}
+
+form {
+	width:50%;
+}
+
+.editForm .ng-invalid {
+  border-left: 5px solid #a94442;
+}
+
+.editForm .ng-valid {
+  border-left: 5px solid #42A948;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
 }
 

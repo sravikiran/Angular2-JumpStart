@@ -1,12 +1,8 @@
 # Angular 2 JumpStart with TypeScript
 
-Work in progress!
-
 The goal of this jumpstart app is to provide
-a simple way to get started with Angular 2 while also showing key Angular 2 features. The sample
+a simple way to get started with Angular 2 while also showing several key Angular 2 features. The sample
 relies on System.js to load TypeScript modules and the required scripts used in the application.
-
-The sample is based on Angular Alpha 45.
 
 Simply clone the project or download and extract the .zip to get started. Here are a few
 screenshots from the app:
@@ -24,23 +20,22 @@ screenshots from the app:
 ## Angular 2 Concepts Covered
 
 * TypeScript version that relies on classes and modules
-* Required scripts are downloaded locally using JSPM
-* TypeScript modules are loaded with System.js
-* Defining routes and using router-outlet
+* Modules are loaded with System.js
+* Defining routes (including child routes)
 * Using Custom Components
 * Using Custom Directives
 * Using Custom Pipes
 * Defining Properties and Using Events in Components/Directives
-* Using the Http object for Ajax calls
+* Using the Http object for Ajax calls along with Rx observables
 * Working with Utility and Service classes (such as for sorting and Ajax calls)
-* Using the New Databinding Syntax [], () and [()]
+* Using Angular 2 databinding Syntax [], () and [()]
+* Using Angular forms functionality for capturing and validating data
 
 ## Running the Application
 
-1. Install global pre-requisites `npm install typescript live-server -g`
-
 1. Run `npm install` to install app dependencies
 
-1. Run `npm run tsc` to start the TypeScript compiler and watch for changes
+2. Run `npm start` in a separate terminal window to build the TypeScript, watch for changes and launch the web server
 
-1. Run `npm start` in a separate terminal window to start the server and launch the app
+This project is used in our Angular 2 Application Development instructor-led training course. For 
+more details visit http://codewithdan.com. 
